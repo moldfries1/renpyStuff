@@ -1,6 +1,5 @@
 #Function checkcalendar, add this in script.rpy
 
-
 init python : 
 
     hour = "Morning" # We choose to start the story in the morning
@@ -24,14 +23,12 @@ init python :
         elif (daycount%7 == 6):
             day_name = "Friday"
 
-
 #Add the calendar in screens.rpy 
 
 screen calendar :
     
     #We call the checkcalendar function
     $ checkcalendar()
-
     
     # Don't stop the user from interacting with other things - this screen is just showing stuff.
     modal False
@@ -52,8 +49,6 @@ screen calendar :
             hbox:  
                 text "[hour]" size 15 yalign 1.5 xalign 0.5 ypos 1.9  
 
-
-
 #Initialize the calendar in the first label with 
 
 show screen calendar
@@ -65,5 +60,3 @@ $ daycount += 1
 #OR 
 
 $ daycount = "Tuesday"
-
-
