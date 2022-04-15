@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define m = Character("Monokuma")
 
 # We initiate the python function that will be called in the calendar
 
@@ -43,19 +43,40 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene hopeacademy
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show monokuma neutre with dissolve and vpunch 
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    m "Tada! Thanks for downloading me!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    show monokuma oups
+
+    m "On the top left you can see the calendar."
+    
+    m "You can manipulate it by incrementing the day_count."
+
+    show monokuma neutre
+
+    $ daycount += 1
+
+    m "Here for example I added 1 to the day_count ! "
+
+    m "You can change the head of the list as you want. "
+
+    show monokuma oups
+
+    m "I hope you like this little script."
+
+    show monokuma cutie
+
+    m "Do not hesitate to send me your comments or improvements !"
+
 
     # This ends the game.
 
